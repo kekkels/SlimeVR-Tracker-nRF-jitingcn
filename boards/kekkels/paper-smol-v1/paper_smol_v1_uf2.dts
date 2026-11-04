@@ -105,7 +105,7 @@ zephyr_udc0: &usbd {
 &spi3 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
-	max-frequency = <DT_FREQ_M(24)>;
+	max-frequency = <DT_FREQ_M(4)>;
 	pinctrl-0 = <&spi3_default>;
 	pinctrl-1 = <&spi3_sleep>;
 	pinctrl-names = "default", "sleep";
@@ -113,7 +113,7 @@ zephyr_udc0: &usbd {
 
 	imu_spi: imu_spi@0 {
 		compatible = "vnd,spi-device";
-		spi-max-frequency = <DT_FREQ_M(24)>;
+		spi-max-frequency = <DT_FREQ_M(4)>;
 		label = "imu-spi";
 		reg = <0>;
 	};
